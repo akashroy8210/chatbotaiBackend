@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin:"*"
+    origin:"https://chatbotai-frontend-five.vercel.app"
 }));
 connectionDB()
 app.use('/api/users/ai',chatRoutes)
