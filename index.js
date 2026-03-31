@@ -13,6 +13,7 @@ app.use(cors({
     origin:"https://chatbotai-frontend-five.vercel.app"
 }));
 connectionDB()
+app.get("/health", (req, res) => res.status(200).json({ ok: true }));
 app.use('/api/users/ai',chatRoutes)
 app.use('/api/users',authRoutes)
 
