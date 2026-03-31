@@ -9,7 +9,9 @@ dotenv.config();
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:"*"
+}));
 connectionDB()
 app.use('/api/users/ai',chatRoutes)
 app.use('/api/users',authRoutes)
