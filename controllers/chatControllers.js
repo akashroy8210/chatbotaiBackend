@@ -97,7 +97,7 @@ RULES:
         const history = chat.messages.map((m) => m.content).join("\n")
 
         const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
+            model: "gemini-3.1-flash-lite-preview",
             contents:[
                 {
                     role:"user",
